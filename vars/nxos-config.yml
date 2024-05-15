@@ -11,3 +11,14 @@ nxos_vlans:
   - vlan_id: 1052
     name: ansible_vlan1052
     state: active
+
+nxos_vrf:
+  # https://docs.ansible.com/ansible/latest/collections/cisco/nxos/nxos_vrf_module.html#ansible-collections-cisco-nxos-nxos-vrf-module
+  - name: ansible_vrf01
+    description: VRF01 configured by ansible
+    admin_state: up
+    state: present
+  - name: ansible_vrf02
+    description: VRF02 configured by ansible
+    admin_state: down
+    state: present
