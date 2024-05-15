@@ -69,7 +69,7 @@ ansible-galaxy collection install -r ./requirements_ansible.yml --force
 
 This project uses the NX-API make sure that it is enabled on your switch:
 
-```bash
+```cli
 nxos# configure terminal
 nxos(config)# feature nxapi
 ```
