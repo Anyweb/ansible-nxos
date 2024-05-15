@@ -1,0 +1,9 @@
+---
+all:
+  hosts:
+    localhost:
+  children:
+    nxos:
+      hosts:
+        sbx-nxos:
+          ansible_host: sbx-nxos-mgmt.cisco.com

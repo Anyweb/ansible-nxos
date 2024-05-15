@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ansible-nxos"
+version = "0.1.0"
+description = "NXOS configuration with ansible"
+authors = ["Stephan Lüscher <stephan.luescher@anyweb.ch.ch>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ansible-core = "^2.16"
+jmespath = "^1.0"
+
+[tool.poetry.group.dev.dependencies]
+ansible-lint = { version = "^24.2", markers = 'platform_system != "Windows"' } # https://github.com/ansible/ansible-lint/issues/2730#issuecomment-1330406601
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

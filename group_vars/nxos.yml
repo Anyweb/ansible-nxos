@@ -1,0 +1,6 @@
+ansible_connection: ansible.netcommon.httpapi
+ansible_network_os: cisco.nxos.nxos
+ansible_user: "{{ lookup('ansible.builtin.env', 'NXOS_USER', default='admin') }}"
+ansible_password: "{{ lookup('ansible.builtin.env', 'NXOS_PASSWORD') }}"
+ansible_httpapi_use_ssl: true
+ansible_httpapi_validate_certs: false
