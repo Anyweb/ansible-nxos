@@ -1,10 +1,11 @@
 # Ansible - NXOS
 
 Kickstart your Cisco NXOS automation journey with Ansible. This project will help you get started
-your Network Automation journey by show casing a simple Ansible setup which you can run in
+with your Network Automation journey by show casing a simple Ansible setup which you can run in
 a [VSCode Devcontainer](https://code.visualstudio.com/docs/devcontainers/containers)
-or on any Linux machine with Python ^3.11 installed. It includes a couple of playbooks
+or on any Linux machine with Python `^3.11` installed. It includes a couple of playbooks
 which are used to demonstrate how easy it can be to write automation tasks for NXOS in Ansible.
+Be it to configure your system or simply to get status information.
 
 ## Installation
 
