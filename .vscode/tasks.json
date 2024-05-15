@@ -1,0 +1,52 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Poetry: Export all requirements",
+      "dependsOn": [
+        "Poetry: Export requirements",
+        "Poetry: Export DEV requirements"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Poetry: Export requirements",
+      "type": "shell",
+      "command": "poetry export --without-hashes -f requirements.txt --output requirements_python.txt",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Poetry: Export DEV requirements",
+      "type": "shell",
+      "command": "poetry export --without-hashes -f requirements.txt --output requirements_python-dev.txt --only dev",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Git: Cleanup",
+      "dependsOn": ["Git: Delete merged branches", "Git: Prune remote"]
+    },
+    {
+      "label": "Git: Delete merged branches",
+      "type": "shell",
+      "command": "git delete-merged-branches",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Git: Prune remote",
+      "type": "shell",
+      "command": "git remote prune origin",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ],
+  "inputs": []
+}

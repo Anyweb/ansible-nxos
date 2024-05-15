@@ -1,0 +1,8 @@
+# Ansible
+*.retry
+collections/*
+!collections/requirements.yml
+!collections/.gitkeep
+
+## Collection tarballs
+*.tar.gz

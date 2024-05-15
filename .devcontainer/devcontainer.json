@@ -1,0 +1,105 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
+{
+  // DevContainer name
+  "name": "ansible-nxos",
+  // DevContainer image
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": true,
+      "version": "3.11"
+    },
+    "ghcr.io/devcontainers-contrib/features/poetry:2": {
+      "version": "1.8.2"
+    }
+  },
+
+  // Container user definition - This is needed for compatibility with podman ->  https://github.com/containers/podman/issues/15001#issuecomment-1193321924
+  "remoteUser": "vscode",
+  "containerUser": "vscode",
+
+  // Container environment variables
+  "containerEnv": {
+    "TZ": "Europe/Zurich",
+    "POETRY_VIRTUALENVS_CREATE": "false"
+  },
+
+  // Install and configure DEV tools
+  "postCreateCommand": "bash ./.devcontainer/install-dev-tools.sh",
+
+  // VSCode settings
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // Terminal settings
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          },
+          "zsh": {
+            "path": "zsh"
+          }
+        },
+        // Editor settings
+        "editor.suggestSelection": "first",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "files.associations": {
+          ".ansible-lint": "yaml",
+          ".gitmessage": "git-commit",
+          "**/pb_*.yml": "ansible",
+          "**/playbooks/*.yml": "ansible",
+          "**/roles/**/tasks/*.yml": "ansible",
+          "inventory": "yaml"
+        },
+        // Ansible configuration
+        "ansible.validation.enabled": true,
+        "ansible.validation.lint.arguments": "-c .ansible-lint",
+        "ansible.ansible.reuseTerminal": true,
+        "ansible.lightspeed.enabled": true,
+        "ansible.lightspeed.suggestions.enabled": true,
+        "ansible.lightspeed.URL": "https://c.ai.ansible.redhat.com",
+        // Template configuration
+        "templates.folder": "./.vscode/templates",
+        // Spell-Check configuration
+        "cSpell.customDictionaries": {
+          "project-words": {
+            "name": "custom-dictionary",
+            "path": "${workspaceRoot}/.vscode/cspell_custom.txt",
+            "description": "Words used in this project",
+            "addWords": true
+          },
+          "custom": true,
+          "internal-terms": false
+        },
+        // Workspace colors
+        "peacock.affectActivityBar": false,
+        "peacock.affectStatusBar": true,
+        "peacock.affectTitleBar": false,
+        "peacock.surpriseMeOnStartup": false
+      },
+      // VSCode Extensions installed in DevContainer
+      "extensions": [
+        "be5invis.toml",
+        "codezombiech.gitignore",
+        "davidanson.vscode-markdownlint",
+        "esbenp.prettier-vscode",
+        "gitlab.gitlab-workflow",
+        "gruntfuggly.todo-tree",
+        "ms-python.autopep8",
+        "ms-python.black-formatter",
+        "ms-python.python",
+        "mutantdino.resourcemonitor",
+        "redhat.ansible",
+        "redhat.vscode-yaml",
+        "rioj7.vscode-file-templates",
+        "streetsidesoftware.code-spell-checker-german",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  }
+}

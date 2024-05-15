@@ -1,0 +1,24 @@
+<type>(scope): <description> 
+
+[optional body]
+
+[optional footer(s)]
+####
+# The CHANGELOG.md is built automatically according to the commit
+# messages. Commit messages that are not matched will be ignored!
+#
+# Supported <type> values
+# -----------------------
+# feat: --> Features
+# fix: --> Bug Fixes
+# doc: --> Documentation
+# perf: --> Performance
+# refactor: --> Refactor
+# style: --> Styling
+# test: --> Testing
+# chore: --> Miscellaneous Tasks
+# revert: --> Revert
+#
+## Example: feat(parser): add ability to parse arrays
+#
+####
