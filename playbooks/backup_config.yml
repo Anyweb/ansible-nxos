@@ -7,5 +7,5 @@
       cisco.nxos.nxos_config:
         backup: true
         backup_options:
-          filename: "{{ ansible_host }}.cfg"
+          filename: "{{ ansible_host }}_{{ now(utc=true, fmt='%Y-%m-%d_%H:%M:%S') }}.cfg"
           dir_path: "{{ nxos_backup_location }}"
