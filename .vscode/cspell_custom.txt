@@ -1,4 +1,5 @@
 autopep
+CNTL
 codezombiech
 davidanson
 devcontainer
@@ -8,9 +9,11 @@ gruntfuggly
 httpapi
 invis
 lightspeed
+Lüscher
 mgmt
 mutantdino
 netcommon
+nxapi
 nxos
 posix
 resourcemonitor
