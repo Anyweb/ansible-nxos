@@ -3,6 +3,7 @@
 collections/*
 !collections/requirements.yml
 !collections/.gitkeep
+backup
 
 ## Collection tarballs
 *.tar.gz

@@ -1,0 +1,11 @@
+---
+- name: NXOS Backup
+  hosts: nxos
+  gather_facts: false
+  tasks:
+    - name: Backup running configuration
+      cisco.nxos.nxos_config:
+        backup: true
+        backup_options:
+          filename: "{{ ansible_host }}.cfg"
+          dir_path: "{{ nxos_backup_location }}"
