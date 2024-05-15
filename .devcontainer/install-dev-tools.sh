@@ -22,6 +22,12 @@ echo ""
 echo -e "${YELLOW}Installing additional tools${ENDCOLOR}"
 echo ""
 sudo apt-get -y install --no-install-recommends git-extras gnupg2
+### git-cliff -> version specified in devcontainer.json
+GIT_CLIFF_SOURCE="https://github.com/orhun/git-cliff/releases/download/v${GIT_CLIFF_VERSION}/git-cliff-${GIT_CLIFF_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+GIT_CLIFF_TMP="/tmp/git-cliff.tar.gz"
+wget -O $GIT_CLIFF_TMP $GIT_CLIFF_SOURCE
+tar -xf $GIT_CLIFF_TMP -C /tmp
+sudo cp /tmp/git-cliff-$GIT_CLIFF_VERSION/git-cliff* /usr/bin
 
 # Add git commit template
 echo ""

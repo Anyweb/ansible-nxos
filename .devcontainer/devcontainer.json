@@ -22,7 +22,8 @@
   // Container environment variables
   "containerEnv": {
     "TZ": "Europe/Zurich",
-    "POETRY_VIRTUALENVS_CREATE": "false"
+    "POETRY_VIRTUALENVS_CREATE": "false",
+    "GIT_CLIFF_VERSION": "2.2.1"
   },
 
   // Install and configure DEV tools
