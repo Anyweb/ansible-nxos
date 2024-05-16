@@ -1,5 +1,8 @@
 # Ansible - NXOS
 
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/Anyweb/ansible-nxos)
+[![Run in Cisco Cloud IDE](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-runable-icon.svg)](https://developer.cisco.com/codeexchange/devenv/Anyweb/ansible-nxos/)
+
 Kickstart your Cisco NXOS automation journey with Ansible. This project will help you get started
 with your Network Automation journey by show casing a simple Ansible setup which you can run in
 a [VSCode Devcontainer](https://code.visualstudio.com/docs/devcontainers/containers)
