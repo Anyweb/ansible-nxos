@@ -47,6 +47,14 @@
         "cwd": "${workspaceFolder}"
       }
     }
+    {
+      "label": "Changelog: Update",
+      "type": "shell",
+      "command": ".devcontainer/changelog.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
   ],
   "inputs": []
 }
