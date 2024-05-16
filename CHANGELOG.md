@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2024-05-16
+
+[5a5a2a8](5a5a2a8ccdbc157a7dbcea3042f1e3c9520a4662)...[7f2246f](7f2246f196d31f71648a5a46d0e73f74ae18c317)
+
+### Miscellaneous Tasks
+
+- Add copyright notice ([b59f2b7](b59f2b71873e2e54a110f01f06a2cc72da18d745))
+- Add devnet badges ([9405b5e](9405b5e2aa032fc52f3fee79bfbdac10338aa637))
+- Add script for changelog update ([7f2246f](7f2246f196d31f71648a5a46d0e73f74ae18c317))
+
 ## [0.1.0] - 2024-05-15
 
 ### Documentation
